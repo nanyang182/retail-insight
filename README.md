@@ -1,5 +1,7 @@
 # Retail Insight · 电商交易洞察看板
 
+**中文** ｜ [English](README.en.md)
+
 > 用 54 万条真实交易明细，回答四个运营问题：收入从哪来、客户会不会走、商品结构健不健康、下一步该做什么。
 
 **🔗 在线看板：https://nanyang182.github.io/retail-insight/**（直接点开，不用装任何东西）
