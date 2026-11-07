@@ -130,7 +130,13 @@ retail-insight/
 - **诚实**：已知偏差单独列一节，主动说清楚数据能支撑什么、不能支撑什么。
 ---
 
+---
+
 ## 相关项目
 
+同一个人的另外两个项目，分别对应前端与后端：
+
 - **JD Lens**（前端 / 产品侧）→ [nanyang182/jd-lens](https://github.com/nanyang182/jd-lens)
-  粘一段招聘 JD，十秒看清它在要什么、你还缺什么。纯前端、零依赖、离线可用。
+  粘一段招聘 JD，十秒看清它在要什么、你还缺什么，纯前端、离线可用。
+- **SplitLink**（后端）→ [nanyang182/splitlink](https://github.com/nanyang182/splitlink)
+  带 A/B 分流的短链服务，纯 Python 标准库 + SQLite，零第三方依赖。
