@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Retail Insight · 电商交易洞察看板</title>
+<meta name="description" content="基于 54 万条真实交易数据的电商运营看板：收入结构、客户分层、商品效率。" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <span class="mark"></span>
+      <span>RETAIL<b>INSIGHT</b></span>
+    </div>
+    <div class="topbar-meta">
+      <span id="meta-source">UCI Online Retail</span>
+      <span class="dot"></span>
+      <span id="meta-range">—</span>
+      <span class="dot"></span>
+      <span>更新 <span id="meta-date">—</span></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">运营驾驶舱 · OPERATIONS COCKPIT</p>
+      <h1>54 万条交易明细，回答四个运营问题</h1>
+      <p class="lede">
+        收入从哪来、客户会不会走、商品结构健不健康、下一步该做什么。
+        数据源为 UCI 公开的英国在线零售商 13 个月真实交易记录。
+      </p>
+      <p class="hero-facts" id="hero-facts"></p>
+    </div>
+    <div class="seg" id="period-switch" role="tablist" aria-label="统计周期"></div>
+  </section>
+
+  <section class="kpis" id="kpis"></section>
+
+  <section class="grid">
+    <article class="card span-8">
+      <header class="card-h">
+        <h2>月度收入与退货率</h2>
+        <p class="sub">柱：销售额 · 折线：退货率</p>
+      </header>
+      <div class="chart tall" id="chart-trend"></div>
+      <p class="chart-note" id="trend-note"></p>
+    </article>
+
+    <article class="card span-4">
+      <header class="card-h">
+        <h2>客户分层</h2>
+        <p class="sub">RFM 规则 · 按客户数</p>
+      </header>
+      <div class="chart" id="chart-rfm"></div>
+      <ul class="legend" id="legend-rfm"></ul>
+    </article>
+
+    <article class="card span-6">
+      <header class="card-h">
+        <h2>收入集中度</h2>
+        <p class="sub">客户累计贡献 · 洛伦兹曲线</p>
+      </header>
+      <div class="chart" id="chart-lorenz"></div>
+    </article>
+
+    <article class="card span-6">
+      <header class="card-h">
+        <h2>订单金额分布</h2>
+        <p class="sub">按单笔订单金额分档</p>
+      </header>
+      <div class="chart" id="chart-price"></div>
+    </article>
+
+    <article class="card span-6">
+      <header class="card-h">
+        <h2>畅销商品 Top 10</h2>
+        <p class="sub">按销售额</p>
+      </header>
+      <div class="chart tall" id="chart-products"></div>
+    </article>
+
+    <article class="card span-6">
+      <header class="card-h">
+        <h2>海外市场</h2>
+        <p class="sub">英国以外 · 按销售额</p>
+      </header>
+      <div class="chart tall" id="chart-countries"></div>
+    </article>
+  </section>
+
+  <section class="insights">
+    <div class="insights-head">
+      <h2 class="section-title">三条可执行建议</h2>
+      <p class="section-sub">结论由流水线自动生成，数字随数据更新，不是手写死的</p>
+    </div>
+    <div class="insight-grid" id="insights"></div>
+  </section>
+
+  <footer class="foot">
+    <dl id="notes"></dl>
+  </footer>
+</main>
+
+<div class="tip" id="tip"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
